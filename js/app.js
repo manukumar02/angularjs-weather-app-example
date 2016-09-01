@@ -1,1 +1,5 @@
-var weatherApp = angular.module('weatherApp', ['ngRoute', 'ngResource']);
+(function () {
+    'use strict';
+
+    angular.module('app', ['ngRoute', 'ngResource']);
+})();

@@ -8,14 +8,7 @@
 <div ng-repeat="w in weatherResult.list">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{ convertData(w.dt) | date: 'MMM d, y'}}</h3>
-                </div>
-                <div class="panel-body">
-                    Daytime temperature: {{ convertToFarenhite(w.temp.day) }}
-                </div>
-            </div>
+            <weather-report weather-day="w" convert-to-standard="convertToFarenhite(dayTimeTemp)" convert-to-date="convertData(dt)" data-format="MMM, d, y"></weather-report>
         </div>
     </div>
 </div>
